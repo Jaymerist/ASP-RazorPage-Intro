@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+img{
+    max-width: 25rem;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.teams{
+    text-align: left;
+}
+
+select{
+    padding: unset;
+}
+
+ol{
+    background-color: lightcyan;
+    padding: 1rem 3rem;
+    border-radius: 0.4rem;
+}
+
+button{
+    margin-top: 1rem;
+}

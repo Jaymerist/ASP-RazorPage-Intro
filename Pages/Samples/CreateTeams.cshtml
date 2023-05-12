@@ -1,0 +1,53 @@
+﻿@page
+@model CPSC1517_Ex03_MihiriKamiss.Pages.Samples.CreateTeamsModel
+@using CPSC1517_Ex03_MihiriKamiss.Models
+@{
+    ViewData["Title"] = "Create Teams";
+}
+
+@Model.Feedback
+
+<h1>Team Member Selection</h1>
+<p>This form allows you to create a number of teams (2-10) and add members to each team at random.</p>
+
+
+<form method="Post">
+    <label>
+        Enter your list of names, with one name per line:
+        <textarea rows="10" placeholder="Person name identifier" asp-for="Names"></textarea>
+    </label>
+    <label>
+        Select the number of teams to be created: 
+        <select name="numOfTeams" id="numOfTeams" asp-for="NumOfTeams" style="width: 3rem;">
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+        </select>
+    </label>
+    <button type="submit" asp-page-handler="Create">Create Teams</button>
+</form>
+
+<div class="teams">
+    @if (Model.TeamsCreated == true)
+    {
+        foreach (Team team in Model.CompleteTeams)
+        {
+            <div>
+                <h3>Team @team.Id</h3>
+                <ol>
+                    @foreach (string member in team.TeamNames)
+                    {
+                        <li>@member</li>
+                    }
+                </ol>
+            </div>
+        }
+    }
+</div>
+

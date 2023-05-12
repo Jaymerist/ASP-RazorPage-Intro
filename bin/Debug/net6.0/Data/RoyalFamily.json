@@ -1,0 +1,25 @@
+{
+  "FamilyName": "Prince of Wales Family",
+  "Persons": [
+    {
+      "Name": "Prince William of Wales",
+      "DateOfBirth": "1982-06-21T00:00:00"
+    },
+    {
+      "Name": "Princess Catherine of Wales",
+      "DateOfBirth": "1982-01-09T00:00:00"
+    },
+    {
+      "Name": "Prince George of Wales",
+      "DateOfBirth": "2013-07-22T00:00:00"
+    },
+    {
+      "Name": "Princess Charlotte of Wales",
+      "DateOfBirth": "2015-05-02T00:00:00"
+    },
+    {
+      "Name": "Prince Louis of Wales",
+      "DateOfBirth": "2018-04-23T00:00:00"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CPSC1517-Ex03-MihiriKamiss.props" />
+</Project>

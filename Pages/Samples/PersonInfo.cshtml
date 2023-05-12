@@ -1,0 +1,35 @@
+﻿@page
+@model CPSC1517_Ex03_MihiriKamiss.Pages.Samples.PersonInfoModel
+@using CPSC1517_Ex03_MihiriKamiss.Models
+@{
+    ViewData["Title"] = "Person Information";
+}
+
+<h1>Person Info</h1>
+<p>Enter your name and date of birth to know your current age, Chinese Zodiac animal and Astrological sign.</p>
+
+@if (!string.IsNullOrWhiteSpace(Model.FeedBack))
+{
+    <blockquote style="background-color:aqua">
+        @Model.FeedBack
+    </blockquote>
+}
+
+<form method="post">
+    <label>
+        Name of Person
+        <input type="text" placeholder="Enter name of person." asp-for="person.Name" />
+    </label>
+    <label>
+        Date of Birth
+        <input type="date" placeholder="Enter the date of birth." asp-for="person.DateOfBirth" />
+    </label>
+    <label>
+        Age on Date
+        <input type="date" placeholder="Enter a date of which to calculate an age on." asp-for="OnDate" />
+    </label>
+    <button type="submit" asp-page-handler="CurrentAge">Current Age</button>
+    <button type="submit" asp-page-handler="AgeOn">Age On</button>
+    <button type="submit" asp-page-handler="Clear">Clear</button>
+</form>
+

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CPSC1517-Ex03-MihiriKamiss/1.0.0": {
+        "runtime": {
+          "CPSC1517-Ex03-MihiriKamiss.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CPSC1517-Ex03-MihiriKamiss/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

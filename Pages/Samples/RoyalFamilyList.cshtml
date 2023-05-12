@@ -1,0 +1,38 @@
+﻿@page
+@model CPSC1517_Ex03_MihiriKamiss.Pages.Samples.RoyalFamilyListModel
+@using CPSC1517_Ex03_MihiriKamiss.Models;
+@{
+    ViewData["Title"] = "Royal Family List";
+}
+<h1>Royal Family List</h1>
+<p>On this page, we can read a JSON file of Royal Family member information and display their names, birthdays, current ages, zodiac animals and astrological signs.</p>
+<p>The json file path was hardcoded into this page.</p>
+
+
+
+@if (Model.royalPerson != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Current Age</th>
+                <th>Chinese Zodiac Animal</th>
+                <th>Astrological Sign</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.royalPerson.Persons)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.DateOfBirth.ToString("MMM dd, yyyy")</td>
+                    <td>@item.CurrentAge</td>
+                    <td>@item.ChineseZodiac()</td>
+                    <td>@item.AstrologicalSign()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
